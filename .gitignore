@@ -1,0 +1,46 @@
+# Terraform working directory: provider binaries, downloaded modules, local state
+.terraform/
+**/.terraform/*
+
+# Terraform state can contain secrets in plaintext
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Plan files can contain sensitive values
+tfplan
+*.tfplan
+*.tfplan.*
+*.tfplan.json
+
+# Local variable files can contain secrets
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Local backend configuration
+backend.hcl
+*.backend.hcl
+!backend.hcl.example
+!*.backend.hcl.example
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Local CLI config and environment files
+.terraformrc
+terraform.rc
+.env
+.env.*
+!/.env.example
+
+# Temporary local overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Keep .terraform.lock.hcl committed: it only contains versions and hashes.
+
+pr_docs

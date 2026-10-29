@@ -1,0 +1,16 @@
+aws_region  = "your-aws-region"
+aws_profile = "your-aws-profile"
+aws_project_name = "your-project-name"
+
+cors_rules = [
+  {
+    id              = "browser_access"
+    allowed_methods = ["GET", "HEAD", "POST"]
+    allowed_origins = ["http://localhost:3000"]
+
+    # Optional — omit to use the defaults in variables.tf:
+    # allowed_headers = ["*"]
+    # expose_headers  = ["ETag"]
+    # max_age_seconds = 3000
+  }
+]
